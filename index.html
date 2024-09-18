@@ -1,0 +1,1447 @@
+<html>
+  <head>
+    <title>Helperdotcom</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f8fa;
+      }
+
+      .container {
+        display: flex;
+      }
+
+      .sidebar {
+        width: 250px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-right: 1px solid #e1e8ed;
+        height: 100vh;
+      }
+
+      .sidebar h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .sidebar a {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        color: #000;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .sidebar a i {
+        margin-right: 10px;
+      }
+
+      .sidebar .post-button {
+        background-color: #1da1f2;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 20px;
+        display: block;
+        text-decoration: none;
+      }
+
+      .main-content {
+        display: flex;
+        width: 1200px;
+        padding: 20px;
+      }
+
+      .main-content .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e1e8ed;
+        padding-bottom: 10px;
+      }
+
+      .main-content .header a {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      .main-content .header a.active {
+        font-weight: bold;
+        border-bottom: 2px solid #1da1f2;
+      }
+
+      .main-content .post {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        border: 1px solid #e1e8ed;
+      }
+
+      .main-content .post .post-header {
+        display: flex;
+        align-items: center;
+      }
+
+      .main-content .post .post-header img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .main-content .post .post-header .post-icons {
+        margin-left: auto;
+      }
+
+      .main-content .post .post-header .post-icons i {
+        margin-right: 10px;
+        color: #1da1f2;
+      }
+
+      .main-content .post .post-content {
+        margin-top: 10px;
+      }
+
+      .main-content .post .post-content img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+
+      .right-sidebar {
+        width: 300px;
+        background-color: #ffffff;
+        padding: 20px;
+        border-left: 1px solid #e1e8ed;
+        height: 100vh;
+        position: fixed;
+        right: 0px;
+      }
+
+      .right-sidebar .search-box {
+        background-color: #e1e8ed;
+        padding: 10px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+      }
+
+      .right-sidebar .search-box input {
+        border: none;
+        background: none;
+        width: 100%;
+        outline: none;
+      }
+
+      .right-sidebar .trending {
+        margin-top: 20px;
+      }
+
+      .right-sidebar .trending h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .right-sidebar .trending .trending-item {
+        margin-bottom: 10px;
+      }
+
+      .right-sidebar .trending .trending-item a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+      }
+
+      .right-sidebar .trending .trending-item p {
+        color: #657786;
+        margin: 0;
+      }
+
+      .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 12px;
+        color: #657786;
+      }
+
+      .footer a {
+        color: #657786;
+        text-decoration: none;
+        margin: 0 5px;
+      }
+
+      .second-child {
+        width: 200px;
+        /* change the width to 200px */
+        height: 100px;
+        /* change the height to 100px */
+        /* add other styles as needed */
+        background-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <h1>helperdotcom</h1>
+        <div id="home">
+          <i class="fas fa-home"> </i>
+          Home
+        </div>
+        <div id="explore">
+          <i class="fas fa-search"> </i>
+          Explore
+        </div>
+        <div id="notification">
+          <i class="fas fa-bell"> </i>
+          Notifications
+        </div>
+        <div id="message">
+          <i class="fas fa-envelope"> </i>
+          Messages
+        </div>
+        <div id="bookmark">
+          <i class="fas fa-bookmark"> </i>
+          Bookmarks
+        </div>
+        <div id="list">
+          <i class="fas fa-list"> </i>
+          Lists
+        </div>
+        <div id="profile">
+          <i class="fas fa-user"> </i>
+          Profile
+        </div>
+        <div id="more">
+          <i class="fas fa-ellipsis-h"> </i>
+          More
+        </div>
+        <a class="post-button" href="#"> Post </a>
+      </div>
+
+      <!-- second child -->
+      <div class="main-content">
+        <div class="mainly">
+          <div class="header">
+            <a class="active" href="#"> Home </a>
+            <a href="#"> For you </a>
+            <a href="#"> Following </a>
+          </div>
+
+          <div class="post">
+            <div class="post-header">
+              <img
+                src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=1024x1024&w=is&k=20&c=-mUWsTSENkugJ3qs5covpaj-bhYpxXY-v9RDpzsw504="
+                alt="User profile picture"
+                height="40"
+                s
+                width="40"
+              />
+              <span> <input type="text" /> What's happening?! </span>
+              <input type="text" />
+              <div class="post-icons">
+                <i class="fas fa-image"> </i>
+                <i class="fas fa-smile"> </i>
+                <i class="fas fa-calendar-alt"> </i>
+                <i class="fas fa-map-marker-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-header">
+              <img
+                src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=1024x1024&w=is&k=20&c=-mUWsTSENkugJ3qs5covpaj-bhYpxXY-v9RDpzsw504="
+                alt="User profile picture"
+                height="40"
+                width="40"
+              />
+              <span>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </span>
+            </div>
+            <div class="post-content">
+              <img
+                alt="Railroad track along a beach with cliffs in the background"
+                height="400"
+                src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-Hh5RPsKhtBPsWCFSiEKnUJ6x/user-8qgiVpCV0U0b7zDjfFInHgjl/img-UCzS6lxlPb6p4QTRU5CUyIjH.png?st=2024-09-13T18%3A06%3A29Z&amp;se=2024-09-13T20%3A06%3A29Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T18%3A15%3A46Z&amp;ske=2024-09-14T18%3A15%3A46Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=PepO0pP8Oil7PCJqG%2BsSJu069gpQX2V1gb8VDVnsZjQ%3D"
+                width="600"
+              />
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-header">
+              <img
+                src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=1024x1024&w=is&k=20&c=-mUWsTSENkugJ3qs5covpaj-bhYpxXY-v9RDpzsw504="
+                alt="User profile picture"
+                height="40"
+                width="40"
+              />
+              <span>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </span>
+            </div>
+            <div class="post-content">
+              <img
+                alt="Railroad track along a beach with cliffs in the background"
+                height="400"
+                src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-Hh5RPsKhtBPsWCFSiEKnUJ6x/user-8qgiVpCV0U0b7zDjfFInHgjl/img-UCzS6lxlPb6p4QTRU5CUyIjH.png?st=2024-09-13T18%3A06%3A29Z&amp;se=2024-09-13T20%3A06%3A29Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T18%3A15%3A46Z&amp;ske=2024-09-14T18%3A15%3A46Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=PepO0pP8Oil7PCJqG%2BsSJu069gpQX2V1gb8VDVnsZjQ%3D"
+                width="600"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- third child -->
+        <div class="right-sidebar">
+          <div class="search-box">
+            <input placeholder="Search Problem" type="text" />
+          </div>
+          <div class="trending">
+            <h2>What’s happening</h2>
+            <div class="trending-item">
+              <p>News · Trending</p>
+              <a href="#"> #BreakingNews </a>
+              <p>36K Problem</p>
+            </div>
+            <div class="trending-item">
+              <p>News · Trending</p>
+              <a href="#"> #BreakingNews </a>
+              <p>36K Problem</p>
+            </div>
+            <div class="trending-item">
+              <p>News · Trending</p>
+              <a href="#"> #BreakingNews </a>
+              <p>36K Problem</p>
+            </div>
+            <div class="trending-item">
+              <p>News · Trending</p>
+              <a href="#"> #BreakingNews </a>
+              <p>36K Problem</p>
+            </div>
+            <a href="#"> Show more </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="#"> Terms of Service </a>
+      <a href="#"> Privacy Policy </a>
+      <a href="#"> Cookie Policy </a>
+      <a href="#"> Accessibility </a>
+      <a href="#"> Ads Info </a>
+      <a href="#"> More </a>
+    </div>
+
+
+
+<!-- Home Section -->
+
+    <div class="home-section" style="display: none">
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f5f8fa;
+        }
+  
+        .container {
+          display: flex;
+        }
+  
+        .sidebar {
+          width: 250px;
+          background-color: #ffffff;
+          padding: 20px;
+          border-right: 1px solid #e1e8ed;
+          height: 100vh;
+        }
+  
+        .sidebar h1 {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+  
+        .sidebar a {
+          display: flex;
+          align-items: center;
+          padding: 10px 0;
+          color: #000;
+          text-decoration: none;
+          font-size: 18px;
+        }
+  
+        .sidebar a i {
+          margin-right: 10px;
+        }
+  
+        .sidebar .post-button {
+          background-color: #1da1f2;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 20px;
+          text-align: center;
+          margin-top: 20px;
+          display: block;
+          text-decoration: none;
+        }
+  
+        .main-content {
+          display: flex;
+          width: 1200px;
+          padding: 20px;
+        }
+  
+        .main-content .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #e1e8ed;
+          padding-bottom: 10px;
+        }
+  
+        .main-content .header a {
+          text-decoration: none;
+          color: #000;
+          font-size: 18px;
+          padding: 10px;
+        }
+  
+        .main-content .header a.active {
+          font-weight: bold;
+          border-bottom: 2px solid #1da1f2;
+        }
+  
+        .main-content .post {
+          background-color: #ffffff;
+          padding: 20px;
+          border-radius: 10px;
+          margin-top: 20px;
+          border: 1px solid #e1e8ed;
+        }
+  
+        .main-content .post .post-header {
+          display: flex;
+          align-items: center;
+        }
+  
+        .main-content .post .post-header img {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+        }
+  
+        .main-content .post .post-header .post-icons {
+          margin-left: auto;
+        }
+  
+        .main-content .post .post-header .post-icons i {
+          margin-right: 10px;
+          color: #1da1f2;
+        }
+  
+        .main-content .post .post-content {
+          margin-top: 10px;
+        }
+  
+        .main-content .post .post-content img {
+          width: 100%;
+          border-radius: 10px;
+          margin-top: 10px;
+        }
+  
+        .right-sidebar {
+          width: 300px;
+          background-color: #ffffff;
+          padding: 20px;
+          border-left: 1px solid #e1e8ed;
+          height: 100vh;
+          position: fixed;
+          right: 0px;
+        }
+  
+        .right-sidebar .search-box {
+          background-color: #e1e8ed;
+          padding: 10px;
+          border-radius: 20px;
+          margin-bottom: 20px;
+        }
+  
+        .right-sidebar .search-box input {
+          border: none;
+          background: none;
+          width: 100%;
+          outline: none;
+        }
+  
+        .right-sidebar .trending {
+          margin-top: 20px;
+        }
+  
+        .right-sidebar .trending h2 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+  
+        .right-sidebar .trending .trending-item {
+          margin-bottom: 10px;
+        }
+  
+        .right-sidebar .trending .trending-item a {
+          text-decoration: none;
+          color: #000;
+          font-weight: bold;
+        }
+  
+        .right-sidebar .trending .trending-item p {
+          color: #657786;
+          margin: 0;
+        }
+  
+        .footer {
+          text-align: center;
+          padding: 20px;
+          font-size: 12px;
+          color: #657786;
+        }
+  
+        .footer a {
+          color: #657786;
+          text-decoration: none;
+          margin: 0 5px;
+        }
+  
+        .second-child {
+          width: 200px;
+          /* change the width to 200px */
+          height: 100px;
+          /* change the height to 100px */
+          /* add other styles as needed */
+          background-color: black;
+        }
+      </style>
+      <div class="main-content">
+        <div class="mainly">
+          <div class="header">
+            <a class="active" href="#"> Home </a>
+            <a href="#"> For you </a>
+            <a href="#"> Following </a>
+          </div>
+
+          <div class="post">
+            <div class="post-header">
+              <img
+                src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=1024x1024&w=is&k=20&c=-mUWsTSENkugJ3qs5covpaj-bhYpxXY-v9RDpzsw504="
+                alt="User profile picture"
+                height="40"
+                s
+                width="40"
+              />
+              <span> <input type="text" /> What's happening?! </span>
+              <input type="text" />
+              <div class="post-icons">
+                <i class="fas fa-image"> </i>
+                <i class="fas fa-smile"> </i>
+                <i class="fas fa-calendar-alt"> </i>
+                <i class="fas fa-map-marker-alt"> </i>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-header">
+              <img
+                src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=1024x1024&w=is&k=20&c=-mUWsTSENkugJ3qs5covpaj-bhYpxXY-v9RDpzsw504="
+                alt="User profile picture"
+                height="40"
+                width="40"
+              />
+              <span>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </span>
+            </div>
+            <div class="post-content">
+              <img
+                alt="Railroad track along a beach with cliffs in the background"
+                height="400"
+                src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-Hh5RPsKhtBPsWCFSiEKnUJ6x/user-8qgiVpCV0U0b7zDjfFInHgjl/img-UCzS6lxlPb6p4QTRU5CUyIjH.png?st=2024-09-13T18%3A06%3A29Z&amp;se=2024-09-13T20%3A06%3A29Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T18%3A15%3A46Z&amp;ske=2024-09-14T18%3A15%3A46Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=PepO0pP8Oil7PCJqG%2BsSJu069gpQX2V1gb8VDVnsZjQ%3D"
+                width="600"
+              />
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-header">
+              <img
+                src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=1024x1024&w=is&k=20&c=-mUWsTSENkugJ3qs5covpaj-bhYpxXY-v9RDpzsw504="
+                alt="User profile picture"
+                height="40"
+                width="40"
+              />
+              <span>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </span>
+            </div>
+            <div class="post-content">
+              <img
+                alt="Railroad track along a beach with cliffs in the background"
+                height="400"
+                src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-Hh5RPsKhtBPsWCFSiEKnUJ6x/user-8qgiVpCV0U0b7zDjfFInHgjl/img-UCzS6lxlPb6p4QTRU5CUyIjH.png?st=2024-09-13T18%3A06%3A29Z&amp;se=2024-09-13T20%3A06%3A29Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T18%3A15%3A46Z&amp;ske=2024-09-14T18%3A15%3A46Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=PepO0pP8Oil7PCJqG%2BsSJu069gpQX2V1gb8VDVnsZjQ%3D"
+                width="600"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Explore Section -->
+    <div class="explore-section" style="display: none;" >
+      <style>
+        body {
+          margin: 0;
+          background-color: #f2f2f2;
+          font-family: Arial, Helvetica, sans-serif;
+          
+        }
+        
+        .header {
+          background-color: #fff;
+          padding: 10px 0;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .header .container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        
+        .header .search {
+          display: flex;
+          align-items: center;
+          background-color: #f2f2f2;
+          border-radius: 20px;
+          padding: 5px 10px;
+        }
+        
+        .header .search input {
+          border: none;
+          outline: none;
+          padding: 5px;
+          font-size: 16px;
+        }
+        
+        .header .search button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          margin-left: 5px;
+        }
+        
+        .header .settings {
+          cursor: pointer;
+          font-size: 18px;
+        }
+        
+        .tabs {
+          background-color: #fff;
+          padding: 10px 0;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .tabs .container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+        
+        .tabs .tab {
+          padding: 10px 20px;
+          border-radius: 20px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          margin: 0 5px;
+        }
+        
+        .tabs .tab.active {
+          background-color: #eee;
+        }
+        
+        .content {
+          padding: 20px;
+        }
+        
+        .content img {
+          width: 100%;
+          height: auto;
+        }
+        
+        .content .text {
+          margin-top: 20px;
+        }
+        
+        .content .text h1 {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+        
+        .content .text p {
+          line-height: 1.5;
+        }
+        
+        .trends {
+          margin-top: 20px;
+        }
+        
+        .trends h2 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        
+        .trends .trend {
+          background-color: #fff;
+          padding: 10px 20px;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .trends .trend h3 {
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+        
+        .trends .trend p {
+          margin-bottom: 0;
+        }
+        </style>
+        </head>
+        
+        <body>
+        <header class="header">
+          <div class="container">
+            <div class="search">
+              <input type="text" placeholder="Search">
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="settings">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.988 1.868l.16.31a1.464 1.464 0 0 1-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l.17.31c.698 1.283-.705 2.686 1.868 1.988l.31-.16a1.464 1.464 0 0 1 2.105.872l.1-.34c.413-1.4 2.397-1.4 2.81 0l.1.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.988-1.868l-.16-.31a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l-.17-.31c-.698-1.283.705-2.686 1.988-1.868l.31.16a1.464 1.464 0 0 1 2.105-.872l.1-.34c.413-1.4 2.397-1.4 2.81 0l-.1.34a1.464 1.464 0 0 1 2.105.872l.31-.17c1.283-.698 2.686.705 1.988 1.868l-.16.31a1.464 1.464 0 0 1-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l.17.31c.698 1.283-.705 2.686 1.868 1.988l.31-.16a1.464 1.464 0 0 1 2.105.872l.1-.34c.413-1.4 2.397-1.4 2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.988 1.868l.16.31a1.464 1.464 0 0 1-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l.17.31c.698 1.283-.705 2.686 1.988 1.868l.31-.16a1.464 1.464 0 0 1 2.105.872l.1-.34c.413-1.4 2.397-1.4 2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.988 1.868l.16.31a1.464 1.464 0 0 1-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l.17.31c.698 1.283-.705 2.686 1.988 1.868l.31-.16a1.464 1.464 0 0 1 2.105.872l.1-.34c.413-1.4 2.397-1.4 2.81 0l-.1.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.988-1.868l-.16-.31a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l-.17-.31c-.698-1.283.705-2.686 1.988-1.868l.31.16a1.464 1.464 0 0 1 2.105-.872l.1-.34c.413-1.4 2.397-1.4 2.81 0z"/>
+              </svg>
+            </div>
+          </div>
+        </header>
+        <nav class="tabs">
+          <div class="container">
+            <a href="#" class="tab active">For you</a>
+            <a href="#" class="tab">Trending</a>
+            <a href="#" class="tab">News</a>
+            <a href="#" class="tab">Sports</a>
+            <a href="#" class="tab">Entertainment</a>
+          </div>
+        </nav>
+        <main class="content">
+          <img src="https://i.imgur.com/T0uK7g6.jpg" alt="London Fashion Week 2024 Womenswear SS25">
+          <div class="text">
+            <h1>Helperdotcom</h1>
+            <p>Explore your work area</p>
+          </div>
+          <div class="trends">
+            <h2>Trending</h2>
+            <div class="trend">
+              <h3>Indian Premier League - Trending</h3>
+              <p>#SuryakumarYadav</p>
+              <p>2,487 posts</p>
+            </div>
+            <div class="trend">
+              <h3>Trending in India</h3>
+              <p>#ElvishYadav</p>
+              <p>Trending with #HBD_Elvish_Yadav</p>
+            </div>
+            <div class="trend">
+              <h3>Entertainment - Trending</h3>
+              <p>#Thalapathy69</p>
+              <p>Trending with One Last Time</p>
+            </div>
+          </div>
+        </main>
+    </div>
+
+    <!-- Message Section -->
+   <div class="message-section" style="display: none;">
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          height: 100vh;
+          background-color: #ffffff;
+      }
+      .sidebar {
+          width: 250px;
+          border-right: 1px solid #e1e8ed;
+          padding: 20px;
+          box-sizing: border-box;
+      }
+      .sidebar a {
+          display: flex;
+          align-items: center;
+          padding: 10px 0;
+          color: #000;
+          text-decoration: none;
+          font-size: 18px;
+      }
+      .sidebar a i {
+          margin-right: 15px;
+      }
+      .sidebar .post-button {
+          background-color: #1da1f2;
+          color: #fff;
+          padding: 10px 0;
+          text-align: center;
+          border-radius: 25px;
+          margin-top: 20px;
+          font-size: 18px;
+      }
+      .sidebar .profile {
+          display: flex;
+          align-items: center;
+          margin-top: 20px;
+      }
+      .sidebar .profile img {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+      }
+      .sidebar .profile .profile-info {
+          display: flex;
+          flex-direction: column;
+      }
+      .sidebar .profile .profile-info span {
+          font-size: 14px;
+      }
+      .main-content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+      }
+      .main-content .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+          border-bottom: 1px solid #e1e8ed;
+      }
+      .main-content .header h2 {
+          margin: 0;
+      }
+      .main-content .header .icons i {
+          margin-left: 20px;
+          font-size: 20px;
+          cursor: pointer;
+      }
+      .main-content .search {
+          padding: 20px;
+          border-bottom: 1px solid #e1e8ed;
+      }
+      .main-content .search input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #e1e8ed;
+          border-radius: 25px;
+          font-size: 16px;
+      }
+      .main-content .messages {
+          padding: 20px;
+          border-bottom: 1px solid #e1e8ed;
+      }
+      .main-content .messages .message {
+          display: flex;
+          align-items: center;
+          padding: 10px 0;
+      }
+      .main-content .messages .message img {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+      }
+      .main-content .messages .message .message-info {
+          display: flex;
+          flex-direction: column;
+      }
+      .main-content .messages .message .message-info span {
+          font-size: 14px;
+      }
+      .main-content .message-selection {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+      }
+      .main-content .message-selection h3 {
+          font-size: 24px;
+          margin-bottom: 10px;
+      }
+      .main-content .message-selection p {
+          font-size: 16px;
+          color: #657786;
+          margin-bottom: 20px;
+      }
+      .main-content .message-selection .new-message-button {
+          background-color: #1da1f2;
+          color: #fff;
+          padding: 10px 20px;
+          border-radius: 25px;
+          font-size: 16px;
+          cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+      <a href="#"><i class="fab fa-xing"></i></a>
+      <a href="#"><i class="fas fa-home"></i> Home</a>
+      <a href="#"><i class="fas fa-hashtag"></i> Explore</a>
+      <a href="#"><i class="far fa-bell"></i> Notifications</a>
+      <a href="#"><i class="far fa-envelope"></i> Messages</a>
+      <a href="#"><i class="fas fa-pen"></i> Grok</a>
+      <a href="#"><i class="far fa-bookmark"></i> Bookmarks</a>
+      <a href="#"><i class="fas fa-users"></i> Communities</a>
+      <a href="#"><i class="fab fa-xing"></i> Premium</a>
+      <a href="#"><i class="fas fa-bolt"></i> Verified Orgs</a>
+      <a href="#"><i class="fas fa-user"></i> Profile</a>
+      <a href="#"><i class="fas fa-ellipsis-h"></i> More</a>
+      <div class="post-button">Post</div>
+      <div class="profile">
+          <img src="https://placehold.co/40x40" alt="Profile picture of user">
+          <div class="profile-info">
+              <span>Anshit Kumar Srivastava</span>
+              <span>@Anshaysi</span>
+          </div>
+      </div>
+  </div>
+  <div class="main-content">
+      <div class="header">
+          <h2>Messages</h2>
+          <div class="icons">
+              <i class="fas fa-cog"></i>
+              <i class="fas fa-envelope"></i>
+          </div>
+      </div>
+      <div class="search">
+          <input type="text" placeholder="Search Direct Messages">
+      </div>
+      <div class="messages">
+          <div class="message">
+              <img src="https://placehold.co/40x40" alt="Profile picture of Anshit Kumar Srivastava">
+              <div class="message-info">
+                  <span>Anshit Kumar Srivastava @Anshaysi · Jul 11</span>
+                  <span>Read it as article and forget it. no need to reply</span>
+              </div>
+          </div>
+      </div>
+      <div class="message-selection">
+          <h3>Select a message</h3>
+          <p>Choose from your existing conversations, start a new one, or just keep swimming.</p>
+          <div class="new-message-button">New message</div>
+      </div>
+  </div>
+   </div>
+<!-- BookMark Section -->
+ <div class="bookmark-section" style="display: none;">
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+.container {
+    display: flex;
+}
+.sidebar {
+    width: 250px;
+    background-color: #f5f8fa;
+    padding: 20px;
+    border-right: 1px solid #e1e8ed;
+    height: 100vh;
+}
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+}
+.sidebar a i {
+    margin-right: 10px;
+}
+.sidebar a.active {
+    font-weight: bold;
+}
+.sidebar .post-button {
+    background-color: #1da1f2;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.sidebar .profile {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+.sidebar .profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+.main-content .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #e1e8ed;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.main-content .search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+}
+.main-content .tweet {
+    background-color: #ffffff;
+    border: 1px solid #e1e8ed;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.main-content .tweet .tweet-header {
+    display: flex;
+    align-items: center;
+}
+.main-content .tweet .tweet-header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.main-content .tweet .tweet-header .tweet-author {
+    font-weight: bold;
+}
+.main-content .tweet .tweet-header .tweet-username {
+    color: #657786;
+    margin-left: 5px;
+}
+.main-content .tweet .tweet-header .tweet-date {
+    color: #657786;
+    margin-left: auto;
+}
+.main-content .tweet .tweet-content {
+    margin-top: 10px;
+}
+.main-content .tweet .tweet-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+.main-content .tweet .tweet-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.main-content .tweet .tweet-footer i {
+    color: #657786;
+}
+.right-sidebar {
+    width: 300px;
+    padding: 20px;
+    border-left: 1px solid #e1e8ed;
+}
+.right-sidebar .section {
+    margin-bottom: 20px;
+}
+.right-sidebar .section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.right-sidebar .section .live-item,
+.right-sidebar .section .trending-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.right-sidebar .section .live-item img,
+.right-sidebar .section .trending-item img {
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.right-sidebar .section .trending-item {
+    justify-content: space-between;
+}
+.right-sidebar .section .trending-item .trending-info {
+    flex: 1;
+}
+.right-sidebar .section .trending-item .trending-info h4 {
+    font-size: 16px;
+    margin: 0;
+}
+.right-sidebar .section .trending-item .trending-info p {
+    color: #657786;
+    margin: 0;
+}
+</style>
+  </head>
+  <body>
+   <div class="container">
+    <!-- <div class="subheader">
+     @Anshaysi
+    </div>
+    <div class="search-bar">
+     <input placeholder="Search Bookmarks" type="text"/>
+    </div> -->
+    <div class="tweet">
+     <div class="tweet-header">
+      <img alt="Profile picture of the user" height="40" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-RK8ImBPh7hp5cI67HRmLTguK.png?st=2024-09-14T02%3A57%3A56Z&amp;se=2024-09-14T04%3A57%3A56Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T23%3A07%3A26Z&amp;ske=2024-09-14T23%3A07%3A26Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=12totHy5bc%2BgbagQEfpp5fxTGkIUOoLROBtAflq5UQw%3D" width="40"/>
+      <div class="name">
+       Learn Something
+      </div>
+      <i class="fas fa-check-circle verified">
+      </i>
+      <div class="username">
+       @cooltechtipz
+      </div>
+      <div class="date">
+       · Aug 4
+      </div>
+     </div>
+     <div class="tweet-content">
+      Tactical Pressure Points
+     </div>
+     <div class="tweet-media">
+      <img alt="Video thumbnail showing a martial arts demonstration" height="500" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-iSwyGUsyKlDEjBnkUtckbPJN.png?st=2024-09-14T02%3A57%3A58Z&amp;se=2024-09-14T04%3A57%3A58Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T23%3A11%3A24Z&amp;ske=2024-09-14T23%3A11%3A24Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=o5RZoD96nDZRYOC9Q4%2BqKUiTxlWDxSCe3Ydd8t14s6g%3D" width="500"/>
+     </div>
+     <div class="tweet-footer">
+      <div class="icon">
+       <i class="far fa-comment">
+       </i>
+       329
+      </div>
+      <div class="icon">
+       <i class="fas fa-retweet">
+       </i>
+       15K
+      </div>
+      <div class="icon">
+       <i class="far fa-heart">
+       </i>
+       89K
+      </div>
+      <div class="icon">
+       <i class="fas fa-chart-bar">
+       </i>
+       12M
+      </div>
+      <div class="icon">
+       <i class="far fa-bookmark">
+       </i>
+      </div>
+     </div>
+    </div>
+   </div>
+  
+ 
+ </div>
+
+ <!-- List Section -->
+  <div class="list-section" style="display: none;">
+    <div class="container">
+      <div class="card">
+        <h1 class="card-title">Helperdotcom</h1>
+        <hr>
+        <h3>Trending Work</h3>
+        <p class="card-text">
+          <a href="#" class="card-link">#SuryakumarYadav</a>
+        </p>
+        <p class="card-text">
+          <a href="#" class="card-link">#ElvishYadav</a>
+        </p>
+        <p class="card-text">
+          Trending with <a href="#" class="card-link">#HBD_Elvish_Yadav</a>
+        </p>
+        <p class="card-text">
+          <a href="#" class="card-link">#Thalapathy69</a>
+        </p>
+        <p class="card-text">
+          Trending with <a href="#" class="card-link">One Last Time</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- profile-section -->
+   <div class="profile-section" style="display: none;">
+    <style>
+      body {
+               font-family: Arial, sans-serif;
+               background-color: #ffffff;
+               margin: 0;
+               padding: 0;
+           }
+           .profile-header {
+               width: 850px;
+               text-align: center;
+               padding: 20px;
+               border-bottom: 1px solid #e1e8ed;
+           }
+           .profile-header img {
+               border-radius: 50%;
+               width: 150px;
+               height: 150px;
+               border: 4px solid #ffffff;
+               margin-top: -75px;
+           }
+           .profile-header h1 {
+               font-size: 24px;
+               margin: 10px 0;
+           }
+           .profile-header h2 {
+               font-size: 18px;
+               color: #657786;
+               margin: 5px 0;
+           }
+           .profile-header p {
+               font-size: 14px;
+               color: #657786;
+               margin: 5px 0;
+           }
+           .profile-header .verified {
+               color: #1da1f2;
+               margin-left: 5px;
+           }
+           .profile-header .edit-profile {
+               border: 1px solid #1da1f2;
+               color: #1da1f2;
+               padding: 5px 10px;
+               border-radius: 20px;
+               font-size: 14px;
+               cursor: pointer;
+               margin-top: 10px;
+           }
+           .profile-stats {
+               display: flex;
+               justify-content: center;
+               padding: 10px 0;
+               border-bottom: 1px solid #e1e8ed;
+           }
+           .profile-stats div {
+               margin: 0 15px;
+               text-align: center;
+           }
+           .profile-stats div span {
+               display: block;
+               font-size: 18px;
+               font-weight: bold;
+           }
+           .profile-stats div label {
+               font-size: 14px;
+               color: #657786;
+           }
+           .profile-tabs {
+               display: flex;
+               justify-content: center;
+               border-bottom: 1px solid #e1e8ed;
+           }
+           .profile-tabs div {
+               padding: 10px 20px;
+               cursor: pointer;
+               font-size: 14px;
+               color: #1da1f2;
+           }
+           .profile-tabs .active {
+               border-bottom: 2px solid #1da1f2;
+               font-weight: bold;
+           }
+           .profile-content {
+               padding: 20px;
+           }
+           .post {
+               display: flex;
+               padding: 10px 0;
+               border-bottom: 1px solid #e1e8ed;
+           }
+           .post img {
+               border-radius: 50%;
+               width: 50px;
+               height: 50px;
+               margin-right: 10px;
+           }
+           .post-content {
+               flex: 1;
+           }
+           .post-content h3 {
+               font-size: 16px;
+               margin: 0;
+           }
+           .post-content p {
+               font-size: 14px;
+               color: #657786;
+               margin: 5px 0;
+           }
+           .post-content .post-date {
+               font-size: 12px;
+               color: #657786;
+           }
+     </style>
+    </head>
+    <body>
+     <div class="profile-header">
+      <div style="background-image: url('https://placehold.co/800x200'); height: 200px; background-size: cover;">
+      </div>
+      <img alt="Profile picture" height="150" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-gh8lMKWdHlwH6L0TAKjZMTMO.png?st=2024-09-14T03%3A20%3A32Z&amp;se=2024-09-14T05%3A20%3A32Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-14T00%3A26%3A19Z&amp;ske=2024-09-15T00%3A26%3A19Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=h%2BK6Vlb1ZSeant4iEe/d4CV/sGQwgqLYbthPiSzWaXQ%3D" width="150"/>
+      <h1>
+       Anshit Kumar Srivastava
+       <i class="fas fa-check-circle verified">
+       </i>
+      </h1>
+      <h2>
+       @Anshaysi
+      </h2>
+      <p>
+       software developer
+      </p>
+      <p>
+       <i class="fas fa-briefcase">
+       </i>
+       Software developer/Programmer/Software engineer
+       <br/>
+       <i class="fas fa-link">
+       </i>
+       <a href="https://anshaysi.github.io/abshit/">
+        anshaysi.github.io/abshit/
+       </a>
+       <br/>
+       <i class="fas fa-calendar-alt">
+       </i>
+       Joined February 2024
+       <br/>
+       <i class="fas fa-phone">
+       </i>
+       Verified phone number
+      </p>
+      <div class="edit-profile">
+       Edit profile
+      </div>
+     </div>
+     <div class="profile-stats">
+      <div>
+       <span>
+        96
+       </span>
+       <label>
+        Following
+       </label>
+      </div>
+      <div>
+       <span>
+        19
+       </span>
+       <label>
+        Followers
+       </label>
+      </div>
+     </div>
+     <div class="profile-tabs">
+      <div class="active">
+       Posts
+      </div>
+      <div>
+       Replies
+      </div>
+      <div>
+       Highlights
+      </div>
+      <div>
+       Articles
+      </div>
+      <div>
+       Media
+      </div>
+      <div>
+       Likes
+      </div>
+     </div>
+     <div class="profile-content">
+      <div class="post">
+       <img alt="Profile picture" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-gh8lMKWdHlwH6L0TAKjZMTMO.png?st=2024-09-14T03%3A20%3A32Z&amp;se=2024-09-14T05%3A20%3A32Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-14T00%3A26%3A19Z&amp;ske=2024-09-15T00%3A26%3A19Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=h%2BK6Vlb1ZSeant4iEe/d4CV/sGQwgqLYbthPiSzWaXQ%3D" width="50"/>
+       <div class="post-content">
+        <h3>
+         Anshit Kumar Srivastava
+         <i class="fas fa-check-circle verified">
+         </i>
+         <span class="post-date">
+          · Jul 17
+         </span>
+        </h3>
+        <p>
+         @Dm_Gorakhpur @sdmsadartehsil @myogiadityanath @narendramodi
+        </p>
+        <p>
+         <a href="https://youtu.be/N8AvDtn4JXQ?fe...">
+          youtu.be/N8AvDtn4JXQ?fe...
+         </a>
+        </p>
+       </div>
+      </div>
+     </div>
+    
+    
+  </div>
+    
+   <!-- more-section -->
+    <div class="more-section" style="display: none;">
+
+    </div>
+   <script src="app.js"></script>
+  </body>
+</html>

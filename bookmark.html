@@ -1,0 +1,363 @@
+<html></html>
+ <head>
+  <title>
+   Bookmarks
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f5f8fa;
+            padding: 20px;
+            border-right: 1px solid #e1e8ed;
+            height: 100vh;
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar a i {
+            margin-right: 10px;
+        }
+        .sidebar a.active {
+            font-weight: bold;
+        }
+        .sidebar .post-button {
+            background-color: #1da1f2;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .sidebar .profile {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+        }
+        .sidebar .profile img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .main-content .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #e1e8ed;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .main-content .search-bar input {
+            border: none;
+            background: none;
+            outline: none;
+            flex: 1;
+            padding: 5px;
+        }
+        .main-content .tweet {
+            background-color: #ffffff;
+            border: 1px solid #e1e8ed;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .main-content .tweet .tweet-header {
+            display: flex;
+            align-items: center;
+        }
+        .main-content .tweet .tweet-header img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .main-content .tweet .tweet-header .tweet-author {
+            font-weight: bold;
+        }
+        .main-content .tweet .tweet-header .tweet-username {
+            color: #657786;
+            margin-left: 5px;
+        }
+        .main-content .tweet .tweet-header .tweet-date {
+            color: #657786;
+            margin-left: auto;
+        }
+        .main-content .tweet .tweet-content {
+            margin-top: 10px;
+        }
+        .main-content .tweet .tweet-content img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .main-content .tweet .tweet-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .main-content .tweet .tweet-footer i {
+            color: #657786;
+        }
+        .right-sidebar {
+            width: 300px;
+            padding: 20px;
+            border-left: 1px solid #e1e8ed;
+        }
+        .right-sidebar .section {
+            margin-bottom: 20px;
+        }
+        .right-sidebar .section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .right-sidebar .section .live-item,
+        .right-sidebar .section .trending-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .right-sidebar .section .live-item img,
+        .right-sidebar .section .trending-item img {
+            border-radius: 10px;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .right-sidebar .section .trending-item {
+            justify-content: space-between;
+        }
+        .right-sidebar .section .trending-item .trending-info {
+            flex: 1;
+        }
+        .right-sidebar .section .trending-item .trending-info h4 {
+            font-size: 16px;
+            margin: 0;
+        }
+        .right-sidebar .section .trending-item .trending-info p {
+            color: #657786;
+            margin: 0;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="sidebar">
+    <a href="#">
+     <i class="fab fa-xing">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fas fa-home">
+     </i>
+     Home
+    </a>
+    <a href="#">
+     <i class="fas fa-hashtag">
+     </i>
+     Explore
+    </a>
+    <a href="#">
+     <i class="fas fa-bell">
+     </i>
+     Notifications
+    </a>
+    <a href="#">
+     <i class="fas fa-envelope">
+     </i>
+     Messages
+    </a>
+    <a href="#">
+     <i class="fas fa-search">
+     </i>
+     Grok
+    </a>
+    <a class="active" href="#">
+     <i class="fas fa-bookmark">
+     </i>
+     Bookmarks
+    </a>
+    <a href="#">
+     <i class="fas fa-users">
+     </i>
+     Communities
+    </a>
+    <a href="#">
+     <i class="fas fa-star">
+     </i>
+     Premium
+    </a>
+    <a href="#">
+     <i class="fas fa-check-circle">
+     </i>
+     Verified Orgs
+    </a>
+    <a href="#">
+     <i class="fas fa-user">
+     </i>
+     Profile
+    </a>
+    <a href="#">
+     <i class="fas fa-ellipsis-h">
+     </i>
+     More
+    </a>
+    <div class="post-button">
+     Post
+    </div>
+    <div class="profile">
+     <img alt="Profile picture of Anshit Kumar Srivast" height="40" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-O4e692tqETDigWc5d7OqXaMy.png?st=2024-09-13T14%3A03%3A03Z&amp;se=2024-09-13T16%3A03%3A03Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-12T23%3A15%3A51Z&amp;ske=2024-09-13T23%3A15%3A51Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=z54x6UOoyHlznxp4PyxzKnMlfo/G6ENY4yLl0gtvRsE%3D" width="40"/>
+     <div>
+      <div>
+       Anshit Kumar Srivast
+      </div>
+      <div>
+       @Anshaysi
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="main-content">
+    <h2>
+     Bookmarks
+    </h2>
+    <div class="search-bar">
+     <input placeholder="Search Bookmarks" type="text"/>
+    </div>
+    <div class="tweet">
+     <div class="tweet-header">
+      <img alt="Profile picture of Learn Something" height="40" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-o4K6hXq1KezHB6DBvAk54yW9.png?st=2024-09-13T14%3A03%3A06Z&amp;se=2024-09-13T16%3A03%3A06Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T00%3A01%3A06Z&amp;ske=2024-09-14T00%3A01%3A06Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=zutXnNwjA0mP/SyYjb%2BaeI/a2BN97VoKiWsSiCjQBHs%3D" width="40"/>
+      <div class="tweet-author">
+       Learn Something
+      </div>
+      <div class="tweet-username">
+       @cooltechtipz
+      </div>
+      <div class="tweet-date">
+       Aug 4
+      </div>
+     </div>
+     <div class="tweet-content">
+      <p>
+       Tactical Pressure Points
+      </p>
+      <img alt="Loading video" src="https://placehold.co/500x300"/>
+     </div>
+     <div class="tweet-footer">
+      <i class="far fa-comment">
+       329
+      </i>
+      <i class="fas fa-retweet">
+       15K
+      </i>
+      <i class="far fa-heart">
+       89K
+      </i>
+      <i class="fas fa-chart-bar">
+       12M
+      </i>
+      <i class="far fa-bookmark">
+      </i>
+     </div>
+    </div>
+   </div>
+   <div class="right-sidebar">
+    <div class="section">
+     <h3>
+      Live on X
+     </h3>
+     <div class="live-item">
+      <img alt="Live news thumbnail" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-ZeEPkB4sltQQtU6cMKDb7DFk.png?st=2024-09-13T14%3A03%3A07Z&amp;se=2024-09-13T16%3A03%3A07Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-12T23%3A02%3A48Z&amp;ske=2024-09-13T23%3A02%3A48Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=3blrsLiekJavocyKitAP/iePv7QsGdp9O6oN%2BPp/fHs%3D" width="50"/>
+      <div>
+       <p>
+        #LIVE | मार्केट की नजर - भारतीय बाजार में तेजी का सीक्रेट - पॉलिसियों में बदलाव एक बेहतर स्ट्रेटेजी - फंडिंग अब भी जाजिफ क्यों माय देंगे? - समझदार निवेशकों...
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="section">
+     <h3>
+      What's happening
+     </h3>
+     <div class="trending-item">
+      <img alt="London Fashion Week thumbnail" height="50" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-LmQ09WWGIGwOeeA4ArnRw0x5/user-uJPET5fjNenSso8wCETWVNOp/img-0NK1TSIV6PeJGFtf56h226ki.png?st=2024-09-13T14%3A03%3A11Z&amp;se=2024-09-13T16%3A03%3A11Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-13T04%3A37%3A56Z&amp;ske=2024-09-14T04%3A37%3A56Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=mf3HYKXmwbrA0w1hgAqs8cDNeXKOZGYGIDhaM6mmdcM%3D" width="50"/>
+      <div class="trending-info">
+       <h4>
+        London Fashion Week 2024 Womenswear SS25
+       </h4>
+       <p>
+        Fashion · LIVE
+       </p>
+      </div>
+     </div>
+     <div class="trending-item">
+      <div class="trending-info">
+       <h4>
+        #Thalapathy69
+       </h4>
+       <p>
+        Trending with #ThalapathyVijay, Project
+       </p>
+      </div>
+      <i class="fas fa-ellipsis-h">
+      </i>
+     </div>
+     <div class="trending-item">
+      <div class="trending-info">
+       <h4>
+        #MunawarFaruqui
+       </h4>
+       <p>
+        Trending in India
+       </p>
+      </div>
+      <i class="fas fa-ellipsis-h">
+      </i>
+     </div>
+     <div class="trending-item">
+      <div class="trending-info">
+       <h4>
+        #ElvishYadav
+       </h4>
+       <p>
+        Trending in India
+       </p>
+      </div>
+      <i class="fas fa-ellipsis-h">
+      </i>
+     </div>
+     <div class="trending-item">
+      <div class="trending-info">
+       <h4>
+        #DelhiRains
+       </h4>
+       <p>
+        Trending in India
+       </p>
+      </div>
+      <i class="fas fa-ellipsis-h">
+      </i>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

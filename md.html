@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .second-child {
+            width: 850px;
+            /* change the width to 200px */
+            height: 100%;
+            /* change the height to 100px */
+            /* add other styles as needed */
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">First child</div>
+        <div class="child second-child">
+        <?php
+        if (isset($_GET['home'])) {
+            include('home.php');
+        } elseif (isset($_GET['bookmark'])) {
+            include('message.php');
+        } elseif (isset($_GET['message'])) {
+            include('bookmark.php');
+        } elseif (isset($_GET['more'])) {
+            include('more.php');
+        } elseif (isset($_GET['explore'])) {
+            include('explore.php');
+        } elseif (isset($_GET['profile'])) {
+            include('profile.php');
+        } elseif (isset($_GET['not'])) {
+            include('not.php');
+        } elseif (isset($_GET['list'])) {
+            include('list.php');
+        } else {
+            include('home.php');
+        }
+        ?>
+        </div>
+        <!-- other child elements -->
+    </div>
+</body>
+
+</html>

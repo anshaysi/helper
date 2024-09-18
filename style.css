@@ -1,0 +1,30 @@
+.icon-btn{
+    padding: 1rem;
+    text-align: start;
+    border-radius: 30px;
+}
+
+.icon-btn:hover {
+    background-color: #eeededce; 
+    color: black;
+  }
+.logo-btn{
+    padding: 1rem;
+    text-align: start;
+}
+  
+  button{
+    text-align: center;
+    
+  }  
+.button:hover{
+    font-weight: bold;
+}
+
+
+.logo{
+    border-radius: 50%;
+    height: 40px;
+    width:40px; 
+    margin: 10px;
+}

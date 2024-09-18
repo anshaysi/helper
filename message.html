@@ -1,0 +1,188 @@
+<html></html>
+<head>
+    <title>Messages</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        .sidebar {
+            width: 250px;
+            border-right: 1px solid #e1e8ed;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar a i {
+            margin-right: 15px;
+        }
+        .sidebar .post-button {
+            background-color: #1da1f2;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 25px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .sidebar .profile {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .sidebar .profile img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .sidebar .profile .profile-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar .profile .profile-info span {
+            font-size: 14px;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        .main-content .header h2 {
+            margin: 0;
+        }
+        .main-content .header .icons i {
+            margin-left: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .main-content .search {
+            padding: 20px;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        .main-content .search input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e1e8ed;
+            border-radius: 25px;
+            font-size: 16px;
+        }
+        .main-content .messages {
+            padding: 20px;
+            border-bottom: 1px solid #e1e8ed;
+        }
+        .main-content .messages .message {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .main-content .messages .message img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .main-content .messages .message .message-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content .messages .message .message-info span {
+            font-size: 14px;
+        }
+        .main-content .message-selection {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .main-content .message-selection h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .main-content .message-selection p {
+            font-size: 16px;
+            color: #657786;
+            margin-bottom: 20px;
+        }
+        .main-content .message-selection .new-message-button {
+            background-color: #1da1f2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#"><i class="fab fa-xing"></i></a>
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-hashtag"></i> Explore</a>
+        <a href="#"><i class="far fa-bell"></i> Notifications</a>
+        <a href="#"><i class="far fa-envelope"></i> Messages</a>
+        <a href="#"><i class="fas fa-pen"></i> Grok</a>
+        <a href="#"><i class="far fa-bookmark"></i> Bookmarks</a>
+        <a href="#"><i class="fas fa-users"></i> Communities</a>
+        <a href="#"><i class="fab fa-xing"></i> Premium</a>
+        <a href="#"><i class="fas fa-bolt"></i> Verified Orgs</a>
+        <a href="#"><i class="fas fa-user"></i> Profile</a>
+        <a href="#"><i class="fas fa-ellipsis-h"></i> More</a>
+        <div class="post-button">Post</div>
+        <div class="profile">
+            <img src="https://placehold.co/40x40" alt="Profile picture of user">
+            <div class="profile-info">
+                <span>Anshit Kumar Srivastava</span>
+                <span>@Anshaysi</span>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h2>Messages</h2>
+            <div class="icons">
+                <i class="fas fa-cog"></i>
+                <i class="fas fa-envelope"></i>
+            </div>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search Direct Messages">
+        </div>
+        <div class="messages">
+            <div class="message">
+                <img src="https://placehold.co/40x40" alt="Profile picture of Anshit Kumar Srivastava">
+                <div class="message-info">
+                    <span>Anshit Kumar Srivastava @Anshaysi · Jul 11</span>
+                    <span>Read it as article and forget it. no need to reply</span>
+                </div>
+            </div>
+        </div>
+        <div class="message-selection">
+            <h3>Select a message</h3>
+            <p>Choose from your existing conversations, start a new one, or just keep swimming.</p>
+            <div class="new-message-button">New message</div>
+        </div>
+    </div>
+</body>
+</html>
